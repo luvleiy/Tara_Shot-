@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.photobooth.controller.StartController"
+            styleClass="start-root"
+            prefWidth="1280"
+            prefHeight="800">
+
+    <center>
+        <StackPane alignment="BOTTOM_CENTER" styleClass="start-button-container">
+            <Button fx:id="startButton" 
+                    onAction="#start" 
+                    styleClass="start-button"/>
+        </StackPane>
+    </center>
+
+</BorderPane>

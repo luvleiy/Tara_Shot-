@@ -1,0 +1,1121 @@
+.single-root {
+    -fx-background-color: #f8f9fa;
+    -fx-background-image: url("file:pictures/bg-3v.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-container {
+    -fx-spacing: 40;
+    -fx-alignment: center;
+    -fx-padding: 20;
+}
+
+.controls-panel {
+    -fx-spacing: 20;
+    -fx-alignment: top-center;
+    -fx-padding: 20;
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-color: rgba(108, 117, 125, 0.15);
+    -fx-border-width: 1;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 10, 0.2, 0, 3);
+    -fx-pref-width: 300px;
+}
+
+.controls-panel .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-pref-width: 12;
+}
+
+.controls-panel .scroll-bar .thumb {
+    -fx-background-color: linear-gradient(to bottom, #e5667c, #d44d6a);
+    -fx-background-radius: 6;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+}
+
+.controls-panel .scroll-bar .thumb:hover {
+    -fx-background-color: linear-gradient(to bottom, #f1778e, #e55d7a);
+}
+
+.controls-panel .scroll-bar .track {
+    -fx-background-color: rgba(229, 102, 124, 0.1);
+    -fx-background-radius: 0;
+}
+
+.controls-panel .scroll-bar .increment-button,
+.controls-panel .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.controls-panel .scroll-bar .increment-arrow,
+.controls-panel .scroll-bar .decrement-arrow {
+    -fx-background-color: #e5667c;
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+.controls-title {
+    -fx-text-fill: #e5667c;
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-padding: 0 0 10 0;
+}
+
+.side-button {
+    -fx-background-color: linear-gradient(to bottom, rgba(162, 194, 106, 0.1), rgba(162, 194, 106, 0.05));
+    -fx-text-fill: #a2c26a;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 10 20;
+    -fx-border-color: rgba(162, 194, 106, 0.3);
+    -fx-border-width: 1;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+    -fx-min-width: 120px;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.1), 6, 0.3, 0, 2);
+}
+
+.side-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #a2c26a, #8aac55);
+    -fx-text-fill: white;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.3), 10, 0.4, 0, 2);
+}
+
+.side-button:disabled {
+    -fx-background-color: rgba(200, 200, 200, 0.5);
+    -fx-text-fill: #999;
+    -fx-cursor: default;
+}
+
+.capture-label {
+    -fx-text-fill: #e5667c;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 5 0 0 0;
+}
+
+.landscape-guide {
+    -fx-fill: transparent;
+    -fx-stroke: rgba(255, 255, 255, 1.0);
+    -fx-stroke-width: 5;
+    -fx-stroke-type: outside;
+}
+
+.preview-pane {
+    -fx-background-color: transparent;
+}
+
+.logo-container {
+    -fx-alignment: center;
+    -fx-padding: 0 0 25 0;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.15), 12, 0.5, 0, 2);
+}
+
+.logo-title {
+    -fx-text-fill: linear-gradient(to bottom, #e5667c, #d44d6a);
+    -fx-font-size: 38px;
+    -fx-font-weight: 900;
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.25), 10, 0.7, 0, 2);
+    -fx-letter-spacing: -0.5px;
+}
+
+.content-grid {
+    -fx-hgap: 25;
+    -fx-vgap: 25;
+    -fx-padding: 0;
+    -fx-alignment: center;
+}
+
+.left-column {
+    -fx-alignment: center;
+    -fx-spacing: 20;
+    -fx-pref-width: 600px;
+}
+
+.camera-frame {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-radius: 0;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-effect: none;
+    -fx-min-width: 850px;
+    -fx-min-height: 650px;
+    -fx-max-width: 850px;
+    -fx-max-height: 650px;
+}
+
+.camera-preview-container {
+    -fx-background-color: transparent;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-padding: 0;
+    -fx-effect: none;
+}
+
+.camera-container {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-min-width: 826px;
+    -fx-min-height: 626px;
+    -fx-max-width: 826px;
+    -fx-max-height: 626px;
+}
+
+.camera-overlay {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15;
+    -fx-padding: 0;
+}
+
+.right-column {
+    -fx-alignment: top-center;
+    -fx-spacing: 20;
+    -fx-pref-width: 500px;
+    -fx-padding: 10 0 0 0;
+}
+
+.control-panel {
+    -fx-spacing: 15;
+    -fx-alignment: center;
+    -fx-padding: 20 25;
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+    -fx-background-radius: 20;
+    -fx-border-color: linear-gradient(to bottom, rgba(229, 102, 124, 0.2), rgba(229, 102, 124, 0.3));
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.08), 15, 0.3, 0, 4);
+    -fx-min-width: 450px;
+}
+
+.section-title {
+    -fx-text-fill: linear-gradient(to right, #a2c26a, #8aac55);
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-padding: 0 0 10 0;
+    -fx-border-color: linear-gradient(to right, #a2c26a, transparent);
+    -fx-border-width: 0 0 2 0;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.2), 4, 0.3, 0, 1);
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, rgba(162, 194, 106, 0.15), rgba(162, 194, 106, 0.08));
+    -fx-text-fill: #a2c26a;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-padding: 12 25;
+    -fx-border-color: linear-gradient(to bottom, rgba(162, 194, 106, 0.8), rgba(162, 194, 106, 0.6));
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.2), 8, 0.3, 0, 2);
+    -fx-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    -fx-min-width: 180px;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #a2c26a, #8aac55);
+    -fx-text-fill: white;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.4), 12, 0.4, 0, 3);
+    -fx-border-color: transparent;
+}
+
+.button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.2), 5, 0.3, 0, 1);
+}
+
+.primary-button {
+    -fx-background-color: linear-gradient(to bottom right, #e5667c, #d44d6a);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 800;
+    -fx-padding: 14 35;
+    -fx-border-color: white;
+    -fx-border-width: 3;
+    -fx-border-radius: 22;
+    -fx-background-radius: 22;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.4), 12, 0.5, 0, 2);
+    -fx-min-width: 200px;
+}
+
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #f1778e, #e55d7a);
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.6), 18, 0.6, 0, 4);
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+.capture-button {
+    -fx-background-color: #e5667c;
+    -fx-background-radius: 50%;
+    -fx-min-width: 80px;
+    -fx-min-height: 80px;
+    -fx-max-width: 80px;
+    -fx-max-height: 80px;
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.5), 10, 0.5, 0, 2);
+}
+
+.capture-button:hover {
+    -fx-background-color: #f1778e;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.7), 15, 0.6, 0, 3);
+}
+
+.capture-circle {
+    -fx-fill: radial-gradient(focus-angle 0deg, focus-distance 0%, center 50% 50%, radius 70%, 
+              #e5667c 0%, #d44d6a 70%, #c23350 100%);
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.5), 15, 0.7, 0, 0);
+    -fx-stroke: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.8));
+    -fx-stroke-width: 4;
+    -fx-stroke-type: inside;
+}
+
+.capture-inner {
+    -fx-fill: radial-gradient(focus-angle 0deg, focus-distance 0%, center 50% 50%, radius 50%, 
+              rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+    -fx-stroke: rgba(255, 255, 255, 0.6);
+    -fx-stroke-width: 2;
+}
+
+.capture-button:hover .capture-circle {
+    -fx-scale-x: 1.12;
+    -fx-scale-y: 1.12;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.7), 22, 0.8, 0, 0);
+    -fx-fill: radial-gradient(focus-angle 0deg, focus-distance 0%, center 50% 50%, radius 70%, 
+              #f1778e 0%, #e55d7a 70%, #d44d6a 100%);
+}
+
+
+.choice-box {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+    -fx-border-color: linear-gradient(to bottom, rgba(229, 102, 124, 0.7), rgba(229, 102, 124, 0.5));
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-text-fill: #e5667c;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 12 20;
+    -fx-min-width: 220px;
+    -fx-pref-width: 220px;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.15), 10, 0.4, 0, 3);
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease;
+}
+
+.choice-box:hover {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.98));
+    -fx-border-color: linear-gradient(to bottom, #e5667c, #d44d6a);
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.25), 12, 0.5, 0, 4);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.choice-box .arrow {
+    -fx-background-color: #e5667c;
+    -fx-shape: "M 0 0 L 4 4 L 8 0 Z";
+    -fx-scale-shape: false;
+    -fx-padding: 0 0 0 5;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.3), 3, 0.5, 0, 1);
+}
+
+.choice-box:hover .arrow {
+    -fx-background-color: #d44d6a;
+}
+
+
+.choice-box .context-menu {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: linear-gradient(to bottom, rgba(229, 102, 124, 0.6), rgba(229, 102, 124, 0.4));
+    -fx-border-width: 2;
+    -fx-padding: 8 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0.5, 0, 5);
+    -fx-min-width: 220px;
+}
+
+.choice-box .menu-item {
+    -fx-background-color: transparent;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+    -fx-text-fill: #666;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-pref-width: 220px;
+}
+
+.choice-box .menu-item:hover {
+    -fx-background-color: linear-gradient(to right, rgba(229, 102, 124, 0.1), rgba(229, 102, 124, 0.05));
+    -fx-text-fill: #e5667c;
+    -fx-font-weight: 600;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: linear-gradient(to right, rgba(229, 102, 124, 0.2), rgba(229, 102, 124, 0.15));
+    -fx-text-fill: #e5667c;
+    -fx-font-weight: 700;
+}
+
+.choice-box .menu-item .label {
+    -fx-text-fill: inherit;
+    -fx-font-weight: inherit;
+}
+
+/* Scrollbar for dropdown */
+.choice-box .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-pref-width: 8;
+}
+
+.choice-box .scroll-bar .thumb {
+    -fx-background-color: rgba(229, 102, 124, 0.3);
+    -fx-background-radius: 4;
+}
+
+.choice-box .scroll-bar .thumb:hover {
+    -fx-background-color: rgba(229, 102, 124, 0.5);
+}
+
+.choice-box .scroll-bar .track {
+    -fx-background-color: rgba(229, 102, 124, 0.05);
+    -fx-background-radius: 0;
+}
+
+.choice-box .scroll-bar .increment-button,
+.choice-box .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+}
+
+.choice-box .scroll-bar .increment-arrow,
+.choice-box .scroll-bar .decrement-arrow {
+    -fx-background-color: rgba(229, 102, 124, 0.5);
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+/* Choice Box when open */
+.choice-box:showing {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.98));
+    -fx-border-color: linear-gradient(to bottom, #e5667c, #d44d6a);
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.3), 15, 0.6, 0, 5);
+}
+
+.status-bar {
+    -fx-background-color: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+    -fx-border-color: rgba(229, 102, 124, 0.2);
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-padding: 12 20;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 8, 0.3, 0, 2);
+    -fx-min-width: 450px;
+    -fx-alignment: center;
+}
+
+.countdown {
+    -fx-text-fill: linear-gradient(to bottom, #e5667c, #d44d6a);
+    -fx-font-size: 64px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.3), 30, 0.8, 0, 0),
+                innershadow(gaussian, rgba(255, 255, 255, 0.3), 8, 0.5, 0, 1);
+    -fx-alignment: center;
+}
+
+.preview-grid {
+    -fx-hgap: 12;
+    -fx-vgap: 12;
+    -fx-padding: 15;
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+    -fx-background-radius: 15;
+    -fx-border-color: rgba(229, 102, 124, 0.15);
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.1), 12, 0.3, 0, 3);
+    -fx-alignment: center;
+}
+
+.preview-cell {
+    -fx-border-color: linear-gradient(to bottom, rgba(222, 226, 230, 0.6), rgba(222, 226, 230, 0.3));
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 8;
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 5, 0.3, 0, 1);
+    -fx-transition: all 0.2s;
+}
+
+.filter-button {
+    -fx-min-width: 140px;
+    -fx-min-height: 45px;
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+    -fx-text-fill: #a2c26a;
+    -fx-border-radius: 18;
+    -fx-background-radius: 18;
+    -fx-border-color: linear-gradient(to bottom, rgba(162, 194, 106, 0.3), rgba(162, 194, 106, 0.1));
+    -fx-border-width: 2;
+    -fx-font-weight: 700;
+    -fx-font-size: 13px;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.1), 6, 0.3, 0, 2);
+}
+
+.button-row {
+    -fx-spacing: 15;
+    -fx-alignment: center;
+    -fx-padding: 15 0 0 0;
+}
+
+.text-field, .text-area {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-border-color: linear-gradient(to bottom, rgba(229, 102, 124, 0.6), rgba(229, 102, 124, 0.3));
+    -fx-border-width: 2;
+    -fx-border-radius: 18;
+    -fx-background-radius: 18;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-padding: 10 15;
+    -fx-prompt-text-fill: #888;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.05), 6, 0.3, 0, 2);
+    -fx-min-width: 250px;
+}
+
+.strip-preview {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+    -fx-border-color: linear-gradient(to bottom, rgba(229, 102, 124, 0.2), rgba(229, 102, 124, 0.1));
+    -fx-border-width: 3;
+    -fx-border-radius: 18;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.1), 15, 0.4, 0, 4);
+    -fx-alignment: center;
+}
+
+.strip-photo-slot {
+    -fx-border-color: linear-gradient(to bottom, rgba(222, 226, 230, 0.6), rgba(222, 226, 230, 0.3));
+    -fx-border-width: 2;
+    -fx-border-radius: 12;
+    -fx-border-style: dashed;
+    -fx-background-color: linear-gradient(to bottom, rgba(248, 249, 250, 0.6), rgba(248, 249, 250, 0.3));
+    -fx-alignment: center;
+}
+
+.strip-photo-slot.active {
+    -fx-border-color: linear-gradient(to bottom, rgba(229, 102, 124, 0.8), rgba(229, 102, 124, 0.6));
+    -fx-background-color: linear-gradient(to bottom, rgba(229, 102, 124, 0.15), rgba(229, 102, 124, 0.08));
+}
+
+.strip-photo-slot.completed {
+    -fx-border-color: linear-gradient(to bottom, rgba(162, 194, 106, 0.8), rgba(162, 194, 106, 0.6));
+    -fx-background-color: white;
+    -fx-border-style: solid;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.2), 5, 0.3, 0, 2);
+}
+
+.center-aligned {
+    -fx-alignment: center;
+}
+
+.right-aligned {
+    -fx-alignment: center-right;
+    -fx-padding: 0 10 0 0;
+}
+
+.left-aligned {
+    -fx-alignment: center-left;
+    -fx-padding: 0 0 0 10;
+}
+
+.vbox-spacing {
+    -fx-spacing: 15;
+}
+
+.hbox-spacing {
+    -fx-spacing: 10;
+}
+
+.margin-top {
+    -fx-margin-top: 10;
+}
+
+.margin-bottom {
+    -fx-margin-bottom: 10;
+}
+
+.margin-left {
+    -fx-margin-left: 10;
+}
+
+.margin-right {
+    -fx-margin-right: 10;
+}
+
+@keyframes pulse {
+    0% { 
+        -fx-scale-x: 1; 
+        -fx-scale-y: 1; 
+        -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.4), 12, 0.7, 0, 0);
+    }
+    50% { 
+        -fx-scale-x: 1.06; 
+        -fx-scale-y: 1.06;
+        -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.6), 20, 0.8, 0, 0);
+    }
+    100% { 
+        -fx-scale-x: 1; 
+        -fx-scale-y: 1;
+        -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.4), 12, 0.7, 0, 0);
+    }
+}
+
+.pulse-animation {
+    -fx-animation: pulse 1.5s infinite ease-in-out;
+}
+
+.progress-bar {
+    -fx-accent: linear-gradient(to right, #a2c26a, #8aac55);
+    -fx-background-color: linear-gradient(to right, rgba(222, 226, 230, 0.3), rgba(222, 226, 230, 0.1));
+    -fx-border-color: rgba(229, 102, 124, 0.2);
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-pref-height: 10px;
+}
+
+.tooltip {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+    -fx-text-fill: #333;
+    -fx-border-color: linear-gradient(to bottom, #a2c26a, #8aac55);
+    -fx-border-width: 2;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-padding: 8 12;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0.4, 0, 2);
+}
+
+.start-root {
+    -fx-background-image: url("file:pictures/bq-start.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-alignment: center;
+}
+
+.start-container {
+    -fx-alignment: center;
+    -fx-spacing: 0;
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.start-button {
+    -fx-background-image: url("file:pictures/button-start.png");
+    -fx-background-size: contain;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 30, 0.6, 0, 0);
+    -fx-pref-width: 250px;
+    -fx-pref-height: 250px;
+    -fx-min-width: 250px;
+    -fx-min-height: 250px;
+    -fx-max-width: 250px;
+    -fx-max-height: 250px;
+    -fx-animation: startPulse 2s infinite;
+    -fx-transition: all 0.3s;
+}
+
+.start-root .start-button:hover {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-animation: none;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 40, 0.7, 0, 0);
+}
+
+.start-button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 20, 0.5, 0, 0);
+}
+
+@keyframes startPulse {
+    0% {
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+    }
+    50% {
+        -fx-scale-x: 1.05;
+        -fx-scale-y: 1.05;
+    }
+    100% {
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+    }
+}
+
+.start-button-container {
+    -fx-alignment: bottom-center;
+    -fx-padding: 0 0 5% 0;
+    -fx-translate-y: 0;
+}
+
+.smartphone-capture-container {
+    -fx-alignment: bottom-center;
+    -fx-padding: 0 0 20 0;
+    -fx-translate-y: 0;
+}
+
+.smartphone-capture-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-pref-width: 70px;
+    -fx-pref-height: 70px;
+    -fx-min-width: 70px;
+    -fx-min-height: 70px;
+    -fx-max-width: 70px;
+    -fx-max-height: 70px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0.5, 0, 3);
+}
+
+.smartphone-capture-outer {
+    -fx-fill: white;
+    -fx-stroke: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+    -fx-stroke-width: 4;
+    -fx-stroke-type: inside;
+    -fx-opacity: 0.9;
+}
+
+.smartphone-capture-inner {
+    -fx-fill: white;
+    -fx-stroke: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+    -fx-stroke-width: 2;
+    -fx-stroke-type: inside;
+}
+
+.smartphone-capture-button:hover .smartphone-capture-outer {
+    -fx-fill: radial-gradient(center 50% 50%, radius 50%, 
+              rgba(255, 255, 255, 1) 0%, 
+              rgba(240, 240, 240, 1) 100%);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 20, 0.6, 0, 5);
+}
+
+.smartphone-capture-button:pressed .smartphone-capture-outer {
+    -fx-fill: radial-gradient(center 50% 50%, radius 50%, 
+              rgba(230, 230, 230, 1) 0%, 
+              rgba(220, 220, 220, 1) 100%);
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.smartphone-capture-button:pressed .smartphone-capture-inner {
+    -fx-fill: #f0f0f0;
+}
+
+.smartphone-capture-button.recording .smartphone-capture-outer {
+    -fx-fill: #ff3b30;
+    -fx-stroke: linear-gradient(to bottom, rgba(255, 59, 48, 0.8), rgba(220, 40, 30, 0.4));
+}
+
+.smartphone-capture-button.recording .smartphone-capture-inner {
+    -fx-fill: #ff3b30;
+    -fx-stroke: rgba(220, 40, 30, 0.3);
+    -fx-scale-x: 0.6;
+    -fx-scale-y: 0.6;
+    -fx-border-radius: 4;
+}
+
+@keyframes recordingPulse {
+    0% {
+        -fx-opacity: 0.7;
+        -fx-scale-x: 0.95;
+        -fx-scale-y: 0.95;
+    }
+    50% {
+        -fx-opacity: 1;
+        -fx-scale-x: 1.05;
+        -fx-scale-y: 1.05;
+    }
+    100% {
+        -fx-opacity: 0.7;
+        -fx-scale-x: 0.95;
+        -fx-scale-y: 0.95;
+    }
+}
+
+.smartphone-capture-button.recording {
+    -fx-animation: recordingPulse 1.5s infinite;
+}
+
+.capture-mode-indicator {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0.5, 0, 1);
+}
+
+.capture-counter {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 6, 0.6, 0, 1);
+}
+
+
+
+.permission-dialog {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom, #e5667c, #d44d6a);
+    -fx-border-width: 3;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-padding: 30;
+    -fx-spacing: 25;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 25, 0.5, 0, 5);
+}
+
+.permission-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: 900;
+    -fx-text-fill: linear-gradient(to right, #e5667c, #d44d6a);
+    -fx-padding: 0 0 10 0;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.2), 5, 0.3, 0, 1);
+}
+
+.permission-message {
+    -fx-font-size: 14px;
+    -fx-text-fill: #444;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+    -fx-padding: 0 20;
+    -fx-line-spacing: 5px;
+}
+
+.permission-button-box {
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-padding: 15 0 0 0;
+}
+
+.permission-allow-button {
+    -fx-background-color: linear-gradient(to bottom right, #a2c26a, #8aac55);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-padding: 12 35;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.4), 10, 0.4, 0, 2);
+    -fx-min-width: 120px;
+}
+
+.permission-allow-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #8aac55, #a2c26a);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.6), 15, 0.5, 0, 3);
+}
+
+.permission-deny-button {
+    -fx-background-color: linear-gradient(to bottom right, #e5667c, #d44d6a);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-padding: 12 35;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.4), 10, 0.4, 0, 2);
+    -fx-min-width: 120px;
+}
+
+.permission-deny-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #d44d6a, #e5667c);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.6), 15, 0.5, 0, 3);
+}
+
+.permission-icon {
+    -fx-font-size: 48px;
+    -fx-text-fill: #e5667c;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.3), 10, 0.5, 0, 0);
+}
+
+.camera-status-indicator {
+    -fx-font-size: 24px;
+    -fx-font-weight: 900;
+    -fx-text-fill: linear-gradient(to bottom, #e5667c, #d44d6a);
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.3), 15, 0.5, 0, 0);
+}
+
+.camera-denied-button {
+    -fx-background-color: linear-gradient(to bottom, rgba(200, 200, 200, 0.8), rgba(150, 150, 150, 0.6));
+    -fx-text-fill: #666;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-padding: 15 30;
+    -fx-border-color: rgba(100, 100, 100, 0.3);
+    -fx-border-width: 2;
+    -fx-border-radius: 18;
+    -fx-background-radius: 18;
+    -fx-cursor: default;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 8, 0.3, 0, 2);
+    -fx-min-width: 200px;
+}
+
+.camera-loading {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #a2c26a;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.3), 10, 0.5, 0, 0);
+}
+
+.camera-flash {
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-opacity: 0;
+}
+
+@keyframes flash {
+    0% {
+        -fx-background-color: rgba(255, 255, 255, 0);
+        -fx-opacity: 0;
+    }
+    50% {
+        -fx-background-color: rgba(255, 255, 255, 0.9);
+        -fx-opacity: 1;
+    }
+    100% {
+        -fx-background-color: rgba(255, 255, 255, 0);
+        -fx-opacity: 0;
+    }
+}
+
+.flash-animation {
+    -fx-animation: flash 0.2s ease-in-out;
+}
+
+
+.dialog-pane {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+    -fx-background-radius: 15;
+    -fx-border-color: linear-gradient(to bottom, #e5667c, #d44d6a);
+    -fx-border-width: 3;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 20, 0.5, 0, 4);
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: linear-gradient(to right, #e5667c, #d44d6a);
+    -fx-background-radius: 15 15 0 0;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.3, 0, 1);
+}
+
+.dialog-pane .content.label {
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-wrap-text: true;
+    -fx-padding: 20;
+}
+
+.dialog-pane .button-bar .container {
+    -fx-padding: 15 20 20 20;
+}
+
+.dialog-pane .button {
+    -fx-background-color: linear-gradient(to bottom, rgba(162, 194, 106, 0.15), rgba(162, 194, 106, 0.08));
+    -fx-text-fill: #a2c26a;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-padding: 10 25;
+    -fx-border-color: linear-gradient(to bottom, rgba(162, 194, 106, 0.8), rgba(162, 194, 106, 0.6));
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.2), 8, 0.3, 0, 2);
+    -fx-min-width: 100px;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: linear-gradient(to bottom, #a2c26a, #8aac55);
+    -fx-text-fill: white;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.4), 12, 0.4, 0, 3);
+    -fx-border-color: transparent;
+}
+
+.dialog-pane .button:focused {
+    -fx-background-color: linear-gradient(to bottom, #a2c26a, #8aac55);
+    -fx-text-fill: white;
+}
+
+.camera-initializing {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-background-radius: 40;
+    -fx-alignment: center;
+    -fx-padding: 20;
+}
+
+.camera-initializing-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 2);
+}
+
+@keyframes loadingDots {
+    0% { content: "Initializing Camera"; }
+    33% { content: "Initializing Camera."; }
+    66% { content: "Initializing Camera.."; }
+    100% { content: "Initializing Camera..."; }
+}
+
+.loading-dots {
+    -fx-animation: loadingDots 1.5s infinite;
+}
+
+
+.camera-frame.denied {
+    -fx-border-color: linear-gradient(to bottom, rgba(200, 200, 200, 0.7), rgba(150, 150, 150, 0.3));
+    -fx-effect: dropshadow(gaussian, rgba(150, 150, 150, 0.2), 20, 0.6, 0, 0);
+}
+
+.camera-frame.loading {
+    -fx-border-color: linear-gradient(to bottom, rgba(162, 194, 106, 0.7), rgba(162, 194, 106, 0.3));
+    -fx-effect: dropshadow(gaussian, rgba(162, 194, 106, 0.2), 20, 0.6, 0, 0);
+}
+
+.permission-overlay {
+    -fx-background-color: transparent;
+    -fx-background-radius: 40;
+    -fx-alignment: center;
+    -fx-padding: 40;
+    -fx-spacing: 20;
+}
+
+.permission-overlay-icon {
+    -fx-font-size: 64px;
+    -fx-text-fill: #e5667c;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.3), 15, 0.7, 0, 0);
+}
+
+.permission-overlay-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #e5667c;
+    -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.2), 5, 0.3, 0, 1);
+}
+
+.permission-overlay-message {
+    -fx-font-size: 16px;
+    -fx-text-fill: #555;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+    -fx-padding: 0 20;
+}
+
+
+.smartphone-capture-button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 8, 0.3, 0, 2);
+}
+
+.smartphone-capture-button:disabled .smartphone-capture-outer {
+    -fx-fill: #cccccc;
+    -fx-stroke: linear-gradient(to bottom, rgba(200, 200, 200, 0.8), rgba(150, 150, 150, 0.4));
+}
+
+.smartphone-capture-button:disabled .smartphone-capture-inner {
+    -fx-fill: #e0e0e0;
+    -fx-stroke: linear-gradient(to bottom, rgba(100, 100, 100, 0.1), rgba(50, 50, 50, 0.2));
+}
+
+
+.camera-guidance {
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0.5, 0, 1);
+    -fx-alignment: center;
+    -fx-padding: 10;
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-background-radius: 10;
+}
+
+
+@keyframes permissionPulse {
+    0% {
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+        -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.3), 15, 0.5, 0, 0);
+    }
+    50% {
+        -fx-scale-x: 1.02;
+        -fx-scale-y: 1.02;
+        -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.5), 20, 0.6, 0, 0);
+    }
+    100% {
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+        -fx-effect: dropshadow(gaussian, rgba(229, 102, 124, 0.3), 15, 0.5, 0, 0);
+    }
+}
+
+.permission-pulse {
+    -fx-animation: permissionPulse 2s infinite ease-in-out;
+}
