@@ -32,4 +32,5 @@ com\example\photobooth\controller\StartController.class
 com\example\photobooth\model\ZoomFilter.class
 com\example\photobooth\model\CoolToneFilter.class
 com\example\photobooth\model\WarmToneFilter.class
+com\example\photobooth\model\StretchFilter.class
 com\example\photobooth\controller\PhotoboothController.class

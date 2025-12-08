@@ -29,6 +29,7 @@ import com.example.photobooth.model.RotateFilter;
 import com.example.photobooth.model.ZoomFilter;
 import com.example.photobooth.model.StretchFilter;
 
+//webcamm libraryyy
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamResolution;
 import javafx.application.Platform;
@@ -117,6 +118,8 @@ public class PhotoboothController {
         this.primaryStage = stage;
     }
 
+    
+    //set background music player
     public void setBgPlayer(MediaPlayer bgPlayer) {
         this.bgPlayer = bgPlayer;
     }
@@ -128,6 +131,8 @@ public class PhotoboothController {
 
         requestCameraPermission();
     }
+
+//camera permission popup 
     
     private void requestCameraPermission() {
         Platform.runLater(() -> {
@@ -274,6 +279,8 @@ public class PhotoboothController {
         });
     }
     
+
+// if permission deniedd then closee app
     private void closeApplication() {
         Platform.runLater(() -> {
             if (primaryStage != null) {
@@ -285,16 +292,17 @@ public class PhotoboothController {
     }
     
     private void setupUI() {
+        //filter options
         filterChoiceBox.getItems().addAll("No Filter", "Retro B&W", "Sepia", "Vintage", "Polaroid", "High Contrast", "Cool Tone", "Warm Tone", "Invert", "Grayscale", "Film Grain", "Faded", "Kodachrome", "Lomography");
         filterChoiceBox.setValue("No Filter");
         filterChoiceBox.setOnAction(e -> updateColorFilter());
         filterChoiceBox.setOnMousePressed(e -> playButtonSound());
-
+        //distortionn options
         distortionChoiceBox.getItems().addAll("None", "Bulge", "Pinch", "Swirl", "Wave", "Fisheye", "Mirror", "Flip", "Rotate", "Zoom", "Stretch");
         distortionChoiceBox.setValue("None");
         distortionChoiceBox.setOnAction(e -> updateDistortionFilter());
         distortionChoiceBox.setOnMousePressed(e -> playButtonSound());
-
+        //timer options
         layoutChoiceBox.getItems().addAll("Single", "Vertical 3", "Grid 2x2", "Horizontal 2", "Vertical 4", "Grid 3x3");
         layoutChoiceBox.setValue("Vertical 3");
         layoutChoiceBox.setOnAction(e -> updateLayout());
@@ -503,12 +511,6 @@ public class PhotoboothController {
         result = mirrorFilter.apply(result);
         return result;
     }
-
-
-
-
-
-
 
     private void playButtonSound() {
         try {
